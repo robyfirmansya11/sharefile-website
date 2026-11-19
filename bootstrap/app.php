@@ -15,13 +15,21 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        $middleware->encryptCookies(except: ['appearance', 'sidebar_state']);
+        // File names, paths and text contents must not be silently normalized.
+        $middleware->trimStrings(except: [fn (Request $request) => $request->is('share/*')]);
+        $middleware->encryptCookies(except: ['appearance', 'sidebar_state', 'app_locale']);
 
         $middleware->web(append: [
+            \App\Http\Middleware\SetLocale::class,
+            \App\Http\Middleware\AuthenticateWindows::class,
             HandleAppearance::class,
             HandleInertiaRequests::class,
             AddLinkHeadersForPreloadedAssets::class,
         ]);
+        $middleware->prependToPriorityList(
+            \Illuminate\Contracts\Auth\Middleware\AuthenticatesRequests::class,
+            \App\Http\Middleware\AuthenticateWindows::class,
+        );
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->shouldRenderJsonWhen(

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { t } from '@/i18n';
 import { Form, Head } from '@inertiajs/vue3';
 import InputError from '@/components/InputError.vue';
 import PasswordInput from '@/components/PasswordInput.vue';
@@ -22,16 +23,16 @@ defineOptions({
 </script>
 
 <template>
-    <Head title="Confirm password" />
+    <Head :title="t('Confirm password')" />
 
     <PasskeyVerify
         :routes="{
             options: confirmOptions(),
             submit: confirmStore(),
         }"
-        label="Confirm with passkey"
-        loading-label="Confirming..."
-        separator="Or confirm with password"
+        :label="t('Confirm with passkey')"
+        :loading-label="t('Confirming...')"
+        :separator="t('Or confirm with password')"
     />
 
     <Form
@@ -41,7 +42,7 @@ defineOptions({
     >
         <div class="space-y-6">
             <div class="grid gap-2">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password"> {{ t('Password') }} </Label>
                 <PasswordInput
                     id="password"
                     name="password"
@@ -60,9 +61,7 @@ defineOptions({
                     :disabled="processing"
                     data-test="confirm-password-button"
                 >
-                    <Spinner v-if="processing" />
-                    Confirm password
-                </Button>
+                    <Spinner v-if="processing" /> {{ t('Confirm password') }} </Button>
             </div>
         </div>
     </Form>

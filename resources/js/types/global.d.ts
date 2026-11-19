@@ -20,6 +20,7 @@ declare module '@inertiajs/core' {
             name: string;
             auth: Auth;
             sidebarOpen: boolean;
+            share: { driver: string; domain: string | null; writesEnabled: boolean };
             [key: string]: unknown;
         };
     }

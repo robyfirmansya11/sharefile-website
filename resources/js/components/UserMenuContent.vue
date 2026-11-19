@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Link, router } from '@inertiajs/vue3';
+import { t } from '@/i18n';
+import { Link, router, usePage } from '@inertiajs/vue3';
 import { LogOut, Settings } from '@lucide/vue';
 import {
     DropdownMenuGroup,
@@ -21,6 +22,7 @@ const handleLogout = () => {
 };
 
 defineProps<Props>();
+const page = usePage();
 </script>
 
 <template>
@@ -29,17 +31,17 @@ defineProps<Props>();
             <UserInfo :user="user" :show-email="true" />
         </div>
     </DropdownMenuLabel>
-    <DropdownMenuSeparator />
-    <DropdownMenuGroup>
+    <DropdownMenuSeparator v-if="page.props.share.driver !== 'windows'" />
+    <DropdownMenuGroup v-if="page.props.share.driver !== 'windows'">
         <DropdownMenuItem :as-child="true">
             <Link class="block w-full cursor-pointer" :href="edit()" prefetch>
                 <Settings class="mr-2 h-4 w-4" />
-                Settings
+                {{ t('Settings') }}
             </Link>
         </DropdownMenuItem>
     </DropdownMenuGroup>
-    <DropdownMenuSeparator />
-    <DropdownMenuItem :as-child="true">
+    <DropdownMenuSeparator v-if="page.props.share.driver !== 'windows'" />
+    <DropdownMenuItem v-if="page.props.share.driver !== 'windows'" :as-child="true">
         <Link
             class="block w-full cursor-pointer"
             :href="logout()"
@@ -48,7 +50,8 @@ defineProps<Props>();
             data-test="logout-button"
         >
             <LogOut class="mr-2 h-4 w-4" />
-            Log out
+            {{ t('Log out') }}
         </Link>
     </DropdownMenuItem>
+    <p v-if="page.props.share.driver === 'windows'" class="max-w-64 px-2 py-3 text-xs leading-5 text-muted-foreground">{{ t('Terhubung melalui Windows. Akun dan password dikelola oleh administrator AD. Identitas mengikuti sesi Windows/browser, bukan tombol logout aplikasi.') }}</p>
 </template>

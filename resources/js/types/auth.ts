@@ -1,7 +1,8 @@
 export type User = {
-    id: number;
+    id: number | string;
     name: string;
     email: string;
+    windows_principal?: string;
     avatar?: string;
     email_verified_at: string | null;
     two_factor_enabled?: boolean;
@@ -12,6 +13,7 @@ export type User = {
 
 export type Auth = {
     user: User;
+    can_manage_staff: boolean;
 };
 
 export type Passkey = {

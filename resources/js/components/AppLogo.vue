@@ -1,19 +1,13 @@
 <script setup lang="ts">
-import { usePage } from '@inertiajs/vue3';
-import AppLogoIcon from '@/components/AppLogoIcon.vue';
-
-const name = usePage().props.name;
+import { Folders } from '@lucide/vue';
 </script>
 
 <template>
-    <div
-        class="flex aspect-square size-8 items-center justify-center rounded-md bg-sidebar-primary text-sidebar-primary-foreground"
-    >
-        <AppLogoIcon class="size-5 fill-current text-white dark:text-black" />
+    <div class="flex aspect-square size-9 items-center justify-center rounded-xl bg-teal-700 text-white">
+        <Folders class="size-5" />
     </div>
-    <div class="ml-1 grid flex-1 text-left text-sm">
-        <span class="mb-0.5 truncate leading-tight font-semibold">{{
-            name
-        }}</span>
+    <div class="ml-2 grid flex-1 text-left">
+        <span class="text-sm font-semibold tracking-tight">Sharefolder</span>
+        <span class="text-[10px] text-muted-foreground">ARTABUMI SENTRA INDUSTRI</span>
     </div>
 </template>

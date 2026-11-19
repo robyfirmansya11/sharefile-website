@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TEMPLATE ONLY: copy to public/web.config on the IIS deployment after review.
+     Requires IIS URL Rewrite and Windows Authentication. Configure the PHP
+     FastCGI handler with the actual php-cgi.exe location in IIS Manager. -->
+<configuration>
+  <system.webServer>
+    <directoryBrowse enabled="false" />
+    <security>
+      <authentication>
+        <anonymousAuthentication enabled="false" />
+        <windowsAuthentication enabled="true" />
+        <basicAuthentication enabled="false" />
+      </authentication>
+      <requestFiltering>
+        <requestLimits maxAllowedContentLength="536870912" />
+      </requestFiltering>
+    </security>
+    <rewrite>
+      <rules>
+        <rule name="Laravel front controller" stopProcessing="true">
+          <match url="^" />
+          <conditions logicalGrouping="MatchAll">
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+            <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+          </conditions>
+          <action type="Rewrite" url="index.php" />
+        </rule>
+      </rules>
+    </rewrite>
+    <httpErrors existingResponse="PassThrough" />
+  </system.webServer>
+</configuration>

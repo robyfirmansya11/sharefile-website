@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { t } from '@/i18n';
 import { Link } from '@inertiajs/vue3';
 import {
     Breadcrumb,
@@ -23,11 +24,11 @@ defineProps<Props>();
             <template v-for="(item, index) in breadcrumbs" :key="index">
                 <BreadcrumbItem>
                     <template v-if="index === breadcrumbs.length - 1">
-                        <BreadcrumbPage>{{ item.title }}</BreadcrumbPage>
+                        <BreadcrumbPage>{{ t(item.title) }}</BreadcrumbPage>
                     </template>
                     <template v-else>
                         <BreadcrumbLink as-child>
-                            <Link :href="item.href">{{ item.title }}</Link>
+                            <Link :href="item.href">{{ t(item.title) }}</Link>
                         </BreadcrumbLink>
                     </template>
                 </BreadcrumbItem>

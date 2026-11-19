@@ -1,0 +1,1253 @@
+{
+  "Bahasa": {
+    "en": "Language",
+    "zh-CN": "语言"
+  },
+  "RUANG KERJA BERSAMA": {
+    "en": "SHARED WORKSPACE",
+    "zh-CN": "共享工作空间"
+  },
+  "File tim, lebih teratur.": {
+    "en": "Team files, organized.",
+    "zh-CN": "团队文件，井井有条。"
+  },
+  "Temukan, simpan, dan kelola dokumen dalam satu tempat.": {
+    "en": "Find, store, and manage documents in one place.",
+    "zh-CN": "在一处查找、存储和管理文档。"
+  },
+  "Unggah file": {
+    "en": "Upload files",
+    "zh-CN": "上传文件"
+  },
+  "Pilih file untuk diunggah": {
+    "en": "Choose files to upload",
+    "zh-CN": "选择要上传的文件"
+  },
+  "Mode percobaan": {
+    "en": "Demo mode",
+    "zh-CN": "演示模式"
+  },
+  " · Uji akses baca": {
+    "en": " · Read-only trial",
+    "zh-CN": " · 只读测试"
+  },
+  "· Belum terhubung ke folder perusahaan": {
+    "en": "· Not connected to company folders yet",
+    "zh-CN": "· 尚未连接公司文件夹"
+  },
+  "Folder di lokasi ini": {
+    "en": "Folders here",
+    "zh-CN": "此位置的文件夹"
+  },
+  "File di lokasi ini": {
+    "en": "Files here",
+    "zh-CN": "此位置的文件"
+  },
+  "Ukuran file di lokasi ini": {
+    "en": "File size here",
+    "zh-CN": "此位置的文件大小"
+  },
+  "folder": {
+    "en": "folders",
+    "zh-CN": "个文件夹"
+  },
+  "file": {
+    "en": "files",
+    "zh-CN": "个文件"
+  },
+  "Folder": {
+    "en": "Folder",
+    "zh-CN": "文件夹"
+  },
+  "File": {
+    "en": "File",
+    "zh-CN": "文件"
+  },
+  "Sedang memproses file…": {
+    "en": "Processing files…",
+    "zh-CN": "正在处理文件…"
+  },
+  "Punya dokumen untuk dibagikan?": {
+    "en": "Have documents to share?",
+    "zh-CN": "有文档要分享吗？"
+  },
+  "Tarik file ke sini, atau": {
+    "en": "Drop files here, or",
+    "zh-CN": "将文件拖到此处，或"
+  },
+  "pilih dari komputer": {
+    "en": "choose from your computer",
+    "zh-CN": "从电脑选择"
+  },
+  "Maks. 25 MB per file": {
+    "en": "Max. 25 MB per file",
+    "zh-CN": "每个文件最大 25 MB"
+  },
+  "Hingga 20 file sekaligus": {
+    "en": "Up to 20 files at once",
+    "zh-CN": "一次最多 20 个文件"
+  },
+  "Antrean upload": {
+    "en": "Upload queue",
+    "zh-CN": "上传队列"
+  },
+  "Upload sedang berjalan": {
+    "en": "Upload in progress",
+    "zh-CN": "正在上传"
+  },
+  "Hasil upload": {
+    "en": "Upload results",
+    "zh-CN": "上传结果"
+  },
+  "Tutup hasil upload": {
+    "en": "Close upload results",
+    "zh-CN": "关闭上传结果"
+  },
+  "Menunggu": {
+    "en": "Waiting",
+    "zh-CN": "等待中"
+  },
+  "Mengunggah": {
+    "en": "Uploading",
+    "zh-CN": "正在上传"
+  },
+  "Menyimpan di server": {
+    "en": "Saving on server",
+    "zh-CN": "正在保存到服务器"
+  },
+  "Selesai": {
+    "en": "Done",
+    "zh-CN": "完成"
+  },
+  "Gagal": {
+    "en": "Failed",
+    "zh-CN": "失败"
+  },
+  "100% transfer belum berarti tersimpan. Tunggu status Selesai; file yang gagal tidak menimpa file lama.": {
+    "en": "100% transferred does not mean saved. Wait for Done; failed uploads do not overwrite existing files.",
+    "zh-CN": "传输达到 100% 不代表已保存。请等待“完成”状态；上传失败不会覆盖现有文件。"
+  },
+  "Tutup pemberitahuan": {
+    "en": "Dismiss notification",
+    "zh-CN": "关闭通知"
+  },
+  "Lokasi folder": {
+    "en": "Folder location",
+    "zh-CN": "文件夹位置"
+  },
+  "Kembali ke folder induk": {
+    "en": "Go to parent folder",
+    "zh-CN": "返回上级文件夹"
+  },
+  "Semua file": {
+    "en": "All files",
+    "zh-CN": "所有文件"
+  },
+  "Cari file di folder ini": {
+    "en": "Search files in this folder",
+    "zh-CN": "搜索此文件夹中的文件"
+  },
+  "Cari di folder ini…": {
+    "en": "Search this folder…",
+    "zh-CN": "搜索此文件夹…"
+  },
+  "Folder baru": {
+    "en": "New folder",
+    "zh-CN": "新建文件夹"
+  },
+  "File teks baru": {
+    "en": "New text file",
+    "zh-CN": "新建文本文件"
+  },
+  "Recycle Bin": {
+    "en": "Recycle Bin",
+    "zh-CN": "回收站"
+  },
+  "Aktivitas saya": {
+    "en": "My activity",
+    "zh-CN": "我的活动"
+  },
+  "Cari hingga subfolder": {
+    "en": "Search subfolders",
+    "zh-CN": "搜索子文件夹"
+  },
+  "Muat ulang": {
+    "en": "Refresh",
+    "zh-CN": "刷新"
+  },
+  "Tampilan file": {
+    "en": "File view",
+    "zh-CN": "文件视图"
+  },
+  "Tampilan daftar": {
+    "en": "List view",
+    "zh-CN": "列表视图"
+  },
+  "Tampilan kartu": {
+    "en": "Grid view",
+    "zh-CN": "网格视图"
+  },
+  "disalin": {
+    "en": "copied",
+    "zh-CN": "复制"
+  },
+  "dipindahkan": {
+    "en": "moved",
+    "zh-CN": "移动"
+  },
+  "Tempel di sini": {
+    "en": "Paste here",
+    "zh-CN": "粘贴到此处"
+  },
+  "Batalkan salin atau pindah": {
+    "en": "Cancel copy or move",
+    "zh-CN": "取消复制或移动"
+  },
+  "dipilih": {
+    "en": "selected",
+    "zh-CN": "已选"
+  },
+  "Salin": {
+    "en": "Copy",
+    "zh-CN": "复制"
+  },
+  "Potong": {
+    "en": "Cut",
+    "zh-CN": "剪切"
+  },
+  "Ganti nama": {
+    "en": "Rename",
+    "zh-CN": "重命名"
+  },
+  "Preview": {
+    "en": "Preview",
+    "zh-CN": "预览"
+  },
+  "Unduh": {
+    "en": "Download",
+    "zh-CN": "下载"
+  },
+  "Hapus": {
+    "en": "Delete",
+    "zh-CN": "删除"
+  },
+  "Batal pilih": {
+    "en": "Clear selection",
+    "zh-CN": "取消选择"
+  },
+  "Pilih semua file": {
+    "en": "Select all files",
+    "zh-CN": "选择所有文件"
+  },
+  "Nama": {
+    "en": "Name",
+    "zh-CN": "名称"
+  },
+  "Diubah": {
+    "en": "Modified",
+    "zh-CN": "修改时间"
+  },
+  "Ukuran": {
+    "en": "Size",
+    "zh-CN": "大小"
+  },
+  "Jenis": {
+    "en": "Type",
+    "zh-CN": "类型"
+  },
+  "Memuat file…": {
+    "en": "Loading files…",
+    "zh-CN": "正在加载文件…"
+  },
+  "File tidak ditemukan": {
+    "en": "No files found",
+    "zh-CN": "未找到文件"
+  },
+  "Mulai dari file pertamamu": {
+    "en": "Start with your first file",
+    "zh-CN": "从第一个文件开始"
+  },
+  "Coba kata pencarian lain.": {
+    "en": "Try a different search term.",
+    "zh-CN": "请尝试其他搜索词。"
+  },
+  "Unggah dokumen atau buat folder untuk merapikan pekerjaan tim.": {
+    "en": "Upload documents or create folders to organize your team's work.",
+    "zh-CN": "上传文档或创建文件夹，让团队工作井然有序。"
+  },
+  "Pilih file": {
+    "en": "Choose files",
+    "zh-CN": "选择文件"
+  },
+  "Hapus pencarian": {
+    "en": "Clear search",
+    "zh-CN": "清除搜索"
+  },
+  "Memproses…": {
+    "en": "Processing…",
+    "zh-CN": "正在处理…"
+  },
+  "Centang untuk memilih · Klik nama untuk membuka / preview": {
+    "en": "Check to select · Click a name to open / preview",
+    "zh-CN": "勾选以选择 · 点击名称打开或预览"
+  },
+  "Lepaskan file untuk mengunggah": {
+    "en": "Drop files to upload",
+    "zh-CN": "释放文件即可上传"
+  },
+  "File dengan nama sama tidak akan ditimpa. Tip: gunakan Ctrl + C, Ctrl + X, dan Ctrl + V untuk salin, potong, dan tempel.": {
+    "en": "Existing files will not be overwritten. Tip: use Ctrl + C, Ctrl + X, and Ctrl + V to copy, cut, and paste.",
+    "zh-CN": "不会覆盖同名文件。提示：使用 Ctrl + C、Ctrl + X 和 Ctrl + V 复制、剪切和粘贴。"
+  },
+  "Buat folder baru": {
+    "en": "Create a new folder",
+    "zh-CN": "创建新文件夹"
+  },
+  "Buat file teks": {
+    "en": "Create a text file",
+    "zh-CN": "创建文本文件"
+  },
+  "Item yang dipilih beserta seluruh isi folder akan dipindahkan ke Recycle Bin. Anda dapat memulihkannya ke lokasi asal.": {
+    "en": "Selected items and all folder contents will move to the Recycle Bin. You can restore them to their original location.",
+    "zh-CN": "所选项目及文件夹内的全部内容将移至回收站。您可以将其恢复到原位置。"
+  },
+  "Nama baru (sertakan ekstensi untuk file)": {
+    "en": "New name (include the file extension)",
+    "zh-CN": "新名称（请包含文件扩展名）"
+  },
+  "Nama folder": {
+    "en": "Folder name",
+    "zh-CN": "文件夹名称"
+  },
+  "Nama file (contoh: catatan.txt)": {
+    "en": "File name (e.g. notes.txt)",
+    "zh-CN": "文件名（例如：notes.txt）"
+  },
+  "Isi file": {
+    "en": "File contents",
+    "zh-CN": "文件内容"
+  },
+  "Batal": {
+    "en": "Cancel",
+    "zh-CN": "取消"
+  },
+  "Pindahkan ke Recycle Bin": {
+    "en": "Move to Recycle Bin",
+    "zh-CN": "移至回收站"
+  },
+  "Simpan nama": {
+    "en": "Save name",
+    "zh-CN": "保存名称"
+  },
+  "Buat": {
+    "en": "Create",
+    "zh-CN": "创建"
+  },
+  "Upload folder belum tersedia. Pilih file di dalam folder tersebut.": {
+    "en": "Folder upload is not available yet. Select the files inside the folder.",
+    "zh-CN": "暂不支持上传文件夹，请选择文件夹内的文件。"
+  },
+  "Selamat datang kembali": {
+    "en": "Welcome back",
+    "zh-CN": "欢迎回来"
+  },
+  "Masuk ke akun Anda untuk melanjutkan ke ruang kerja dan mengelola file tim.": {
+    "en": "Sign in to your account to access the workspace and manage team files.",
+    "zh-CN": "登录您的账户，进入工作空间并管理团队文件。"
+  },
+  "Masuk • Sharefolder": {
+    "en": "Sign in • Sharefolder",
+    "zh-CN": "登录 • Sharefolder"
+  },
+  "Masuk dengan passkey": {
+    "en": "Sign in with a passkey",
+    "zh-CN": "使用通行密钥登录"
+  },
+  "Memverifikasi…": {
+    "en": "Verifying…",
+    "zh-CN": "正在验证…"
+  },
+  "atau masuk dengan email": {
+    "en": "or sign in with email",
+    "zh-CN": "或使用邮箱登录"
+  },
+  "Alamat email": {
+    "en": "Email address",
+    "zh-CN": "电子邮箱"
+  },
+  "nama@perusahaan.com": {
+    "en": "name@company.com",
+    "zh-CN": "name@company.com"
+  },
+  "Password": {
+    "en": "Password",
+    "zh-CN": "密码"
+  },
+  "Lupa password?": {
+    "en": "Forgot password?",
+    "zh-CN": "忘记密码？"
+  },
+  "Masukkan password Anda": {
+    "en": "Enter your password",
+    "zh-CN": "请输入密码"
+  },
+  "Ingat saya": {
+    "en": "Remember me",
+    "zh-CN": "记住我"
+  },
+  "Sedang masuk…": {
+    "en": "Signing in…",
+    "zh-CN": "正在登录…"
+  },
+  "Masuk ke ruang kerja": {
+    "en": "Sign in to workspace",
+    "zh-CN": "登录工作空间"
+  },
+  "Belum punya akun?": {
+    "en": "Don't have an account?",
+    "zh-CN": "还没有账户？"
+  },
+  "Buat akun": {
+    "en": "Create account",
+    "zh-CN": "创建账户"
+  },
+  "Gunakan akun aplikasi yang sudah terdaftar. Login dengan akun Active Directory belum tersedia.": {
+    "en": "Use your registered app account. Active Directory sign-in is not available yet.",
+    "zh-CN": "请使用已注册的应用账户。暂不支持 Active Directory 登录。"
+  },
+  "Ruang kerja digital tim Anda": {
+    "en": "Your team's digital workspace",
+    "zh-CN": "您团队的数字工作空间"
+  },
+  "Berkas tertata.": {
+    "en": "Organized files.",
+    "zh-CN": "文件有序。"
+  },
+  "Kerja lebih mudah.": {
+    "en": "Work made easier.",
+    "zh-CN": "工作更轻松。"
+  },
+  "Satu tempat untuk mengelola dokumen, merapikan folder, dan melanjutkan pekerjaan bersama tim.": {
+    "en": "One place to manage documents, organize folders, and work together.",
+    "zh-CN": "在同一个地方管理文档、整理文件夹并与团队协作。"
+  },
+  "Ruang kerja tim": {
+    "en": "Team workspace",
+    "zh-CN": "团队工作空间"
+  },
+  "Dokumen": {
+    "en": "Documents",
+    "zh-CN": "文档"
+  },
+  "Laporan": {
+    "en": "Reports",
+    "zh-CN": "报告"
+  },
+  "Arsip": {
+    "en": "Archive",
+    "zh-CN": "归档"
+  },
+  "Tarik. Lepaskan. Selesai.": {
+    "en": "Drag. Drop. Done.",
+    "zh-CN": "拖动。释放。完成。"
+  },
+  "Lebih teratur, dari folder pertama.": {
+    "en": "Organized from the first folder.",
+    "zh-CN": "从第一个文件夹开始，井然有序。"
+  },
+  "Jeda animasi": {
+    "en": "Pause animation",
+    "zh-CN": "暂停动画"
+  },
+  "Lanjutkan animasi": {
+    "en": "Resume animation",
+    "zh-CN": "继续动画"
+  },
+  "Mode gelap": {
+    "en": "Dark mode",
+    "zh-CN": "深色模式"
+  },
+  "Aktifkan mode terang": {
+    "en": "Enable light mode",
+    "zh-CN": "启用浅色模式"
+  },
+  "Aktifkan mode gelap": {
+    "en": "Enable dark mode",
+    "zh-CN": "启用深色模式"
+  },
+  "File bersama": {
+    "en": "Shared files",
+    "zh-CN": "共享文件"
+  },
+  "Settings": {
+    "en": "Settings",
+    "zh-CN": "设置",
+    "id": "Pengaturan"
+  },
+  "Log out": {
+    "en": "Log out",
+    "zh-CN": "退出登录",
+    "id": "Keluar"
+  },
+  "Item yang Anda hapus dari folder lokal. Pulihkan ke lokasi asal atau hapus permanen.": {
+    "en": "Items you deleted from local folders. Restore them or delete them permanently.",
+    "zh-CN": "您从本地文件夹删除的项目。可恢复到原位置或永久删除。"
+  },
+  "Jika folder asal ikut dihapus, pulihkan folder tersebut terlebih dahulu. Nama yang sudah ada tidak akan ditimpa. Tidak ada penghapusan otomatis.": {
+    "en": "If the original folder was also deleted, restore it first. Existing names will not be overwritten. Items are not deleted automatically.",
+    "zh-CN": "如果原文件夹也被删除，请先恢复该文件夹。不会覆盖同名项目，也不会自动删除。"
+  },
+  "File atau folder beserta seluruh isinya tidak dapat dipulihkan melalui aplikasi setelah tindakan ini.": {
+    "en": "After this action, the file or folder and all its contents cannot be restored through this app.",
+    "zh-CN": "执行此操作后，无法通过本应用恢复该文件或文件夹及其全部内容。"
+  },
+  "Ya, hapus permanen": {
+    "en": "Yes, delete permanently",
+    "zh-CN": "是，永久删除"
+  },
+  "Memuat Recycle Bin…": {
+    "en": "Loading Recycle Bin…",
+    "zh-CN": "正在加载回收站…"
+  },
+  "Recycle Bin Anda kosong.": {
+    "en": "Your Recycle Bin is empty.",
+    "zh-CN": "您的回收站为空。"
+  },
+  "Asal: /": {
+    "en": "Original location: /",
+    "zh-CN": "原位置：/"
+  },
+  "Dihapus": {
+    "en": "Deleted",
+    "zh-CN": "删除时间"
+  },
+  "Pulihkan": {
+    "en": "Restore",
+    "zh-CN": "恢复"
+  },
+  "Hapus permanen": {
+    "en": "Delete permanently",
+    "zh-CN": "永久删除"
+  },
+  "Pratinjau file · gambar maksimal 5 MB, teks UTF-8 maksimal 1 MB, PDF maksimal 10 MB.": {
+    "en": "File preview · images up to 5 MB, UTF-8 text up to 1 MB, PDF up to 10 MB.",
+    "zh-CN": "文件预览 · 图片最大 5 MB，UTF-8 文本最大 1 MB，PDF 最大 10 MB。"
+  },
+  "Membuka file…": {
+    "en": "Opening file…",
+    "zh-CN": "正在打开文件…"
+  },
+  "Gambar tidak dapat ditampilkan. Silakan unduh file.": {
+    "en": "The image cannot be displayed. Please download the file.",
+    "zh-CN": "无法显示图片，请下载文件。"
+  },
+  "(File kosong)": {
+    "en": "(Empty file)",
+    "zh-CN": "（空文件）"
+  },
+  "Unduh file": {
+    "en": "Download file",
+    "zh-CN": "下载文件"
+  },
+  "Menyiapkan PDF…": {
+    "en": "Preparing PDF…",
+    "zh-CN": "正在准备 PDF…"
+  },
+  "Halaman PDF sebelumnya": {
+    "en": "Previous PDF page",
+    "zh-CN": "PDF 上一页"
+  },
+  "Halaman PDF berikutnya": {
+    "en": "Next PDF page",
+    "zh-CN": "PDF 下一页"
+  },
+  "Perkecil PDF": {
+    "en": "Zoom out",
+    "zh-CN": "缩小 PDF"
+  },
+  "Perbesar PDF": {
+    "en": "Zoom in",
+    "zh-CN": "放大 PDF"
+  },
+  "Pratinjau visual. Gunakan Unduh untuk pencarian teks, salin teks, formulir, atau pembaca layar.": {
+    "en": "Visual preview. Download for text search, copying text, forms, or screen readers.",
+    "zh-CN": "此处为视觉预览。如需搜索或复制文本、填写表单或使用屏幕阅读器，请下载文件。"
+  },
+  "Halaman PDF tidak dapat ditampilkan. Silakan unduh dokumen untuk membukanya.": {
+    "en": "The PDF page cannot be displayed. Download the document to open it.",
+    "zh-CN": "无法显示 PDF 页面，请下载文档后打开。"
+  },
+  "PDF ini dilindungi password. Unduh dan buka dengan pembaca PDF Anda.": {
+    "en": "This PDF is password protected. Download it and open it in your PDF reader.",
+    "zh-CN": "此 PDF 受密码保护。请下载并使用 PDF 阅读器打开。"
+  },
+  "PDF rusak atau tidak dapat ditampilkan. Silakan unduh dokumen.": {
+    "en": "The PDF is damaged or cannot be displayed. Please download it.",
+    "zh-CN": "PDF 已损坏或无法显示，请下载文档。"
+  },
+  "Cari file dan folder": {
+    "en": "Search files and folders",
+    "zh-CN": "搜索文件和文件夹"
+  },
+  "Cari berdasarkan nama, termasuk seluruh subfolder dalam lokasi yang dipilih.": {
+    "en": "Search by name, including all subfolders in the selected location.",
+    "zh-CN": "按名称搜索，包括所选位置中的全部子文件夹。"
+  },
+  "Nama file atau folder": {
+    "en": "File or folder name",
+    "zh-CN": "文件或文件夹名称"
+  },
+  "Contoh: laporan": {
+    "en": "Example: report",
+    "zh-CN": "例如：报告"
+  },
+  "Lokasi": {
+    "en": "Location",
+    "zh-CN": "位置"
+  },
+  "Semua folder": {
+    "en": "All folders",
+    "zh-CN": "所有文件夹"
+  },
+  "Cari": {
+    "en": "Search",
+    "zh-CN": "搜索"
+  },
+  "Mencari di subfolder…": {
+    "en": "Searching subfolders…",
+    "zh-CN": "正在搜索子文件夹…"
+  },
+  "hasil ditemukan.": {
+    "en": "results found.",
+    "zh-CN": "个结果。"
+  },
+  "Hasil belum lengkap: batas pencarian tercapai atau ada folder yang tidak dapat dibaca. Pilih lokasi yang lebih spesifik atau perjelas nama pencarian.": {
+    "en": "Results are incomplete: a search limit was reached or some folders could not be read. Choose a narrower location or a more specific name.",
+    "zh-CN": "结果不完整：已达到搜索限制或某些文件夹无法读取。请选择更具体的位置或名称。"
+  },
+  "Lokasi: /": {
+    "en": "Location: /",
+    "zh-CN": "位置：/"
+  },
+  "Buka folder asal": {
+    "en": "Open original folder",
+    "zh-CN": "打开所在文件夹"
+  },
+  "Maksimal 100 hasil per pencarian. Pencarian berdasarkan nama, bukan isi dokumen.": {
+    "en": "Up to 100 results per search. Searches match names, not document contents.",
+    "zh-CN": "每次最多显示 100 个结果。搜索匹配名称，不搜索文档内容。"
+  },
+  "Buat folder": {
+    "en": "Create folder",
+    "zh-CN": "创建文件夹"
+  },
+  "Buat file": {
+    "en": "Create file",
+    "zh-CN": "创建文件"
+  },
+  "Pindahkan": {
+    "en": "Move",
+    "zh-CN": "移动"
+  },
+  "Ke Recycle Bin": {
+    "en": "Move to Recycle Bin",
+    "zh-CN": "移至回收站"
+  },
+  "Upload": {
+    "en": "Upload",
+    "zh-CN": "上传"
+  },
+  "Permintaan tidak valid": {
+    "en": "Invalid request",
+    "zh-CN": "无效请求"
+  },
+  "Berhasil": {
+    "en": "Successful",
+    "zh-CN": "成功"
+  },
+  "Unduhan disiapkan": {
+    "en": "Download prepared",
+    "zh-CN": "下载已准备好"
+  },
+  "Hasil belum tercatat": {
+    "en": "Result not recorded yet",
+    "zh-CN": "结果尚未记录"
+  },
+  "Riwayat akun Anda pada folder penyimpanan yang sedang digunakan. Catatan dimulai sejak fitur ini diaktifkan.": {
+    "en": "Your account's activity in the current storage folder. Records begin when this feature was enabled.",
+    "zh-CN": "您账户在当前存储文件夹中的活动记录。从启用此功能时开始记录。"
+  },
+  "Tindakan": {
+    "en": "Action",
+    "zh-CN": "操作"
+  },
+  "Semua tindakan": {
+    "en": "All actions",
+    "zh-CN": "所有操作"
+  },
+  "Muat ulang riwayat": {
+    "en": "Refresh activity",
+    "zh-CN": "刷新活动记录"
+  },
+  "Memuat aktivitas…": {
+    "en": "Loading activity…",
+    "zh-CN": "正在加载活动记录…"
+  },
+  "Belum ada aktivitas untuk filter ini.": {
+    "en": "No activity for this filter.",
+    "zh-CN": "此筛选条件下暂无活动记录。"
+  },
+  "Nama baru:": {
+    "en": "New name:",
+    "zh-CN": "新名称："
+  },
+  "Folder tujuan: /": {
+    "en": "Destination folder: /",
+    "zh-CN": "目标文件夹：/"
+  },
+  "Halaman sebelumnya": {
+    "en": "Previous page",
+    "zh-CN": "上一页"
+  },
+  "Halaman berikutnya": {
+    "en": "Next page",
+    "zh-CN": "下一页"
+  },
+  "Status unduhan mencatat file disiapkan server, bukan bukti file selesai diterima. Kegagalan operasi banyak file dapat menyisakan sebagian hasil; periksa folder sebelum mencoba kembali.": {
+    "en": "Download status records server preparation, not completed receipt. Failed batch operations may leave partial results; check the folder before retrying.",
+    "zh-CN": "下载状态仅记录服务器已准备文件，不代表接收完成。批量操作失败时可能已完成部分操作，请检查文件夹后再重试。"
+  },
+  "Koneksi terputus. Muat ulang folder sebelum mencoba lagi; file mungkin sudah tersimpan.": {
+    "en": "Connection lost. Refresh the folder before retrying; the file may already be saved.",
+    "zh-CN": "连接中断。重试前请刷新文件夹；文件可能已保存。"
+  },
+  "Waktu upload habis. Muat ulang folder untuk memeriksa apakah file sudah tersimpan.": {
+    "en": "Upload timed out. Refresh the folder to check whether the file was saved.",
+    "zh-CN": "上传超时。请刷新文件夹，检查文件是否已保存。"
+  },
+  "Pilih maksimal 20 file dalam satu antrean.": {
+    "en": "Select up to 20 files per queue.",
+    "zh-CN": "每次队列最多选择 20 个文件。"
+  },
+  "File melebihi batas 25 MB.": {
+    "en": "The file exceeds the 25 MB limit.",
+    "zh-CN": "文件超过 25 MB 限制。"
+  },
+  "Sesi berakhir. Muat ulang halaman dan masuk kembali.": {
+    "en": "Session expired. Refresh the page and sign in again.",
+    "zh-CN": "会话已过期，请刷新页面并重新登录。"
+  },
+  "Ukuran file melampaui batas server. Pilih file yang lebih kecil.": {
+    "en": "The file exceeds the server size limit. Choose a smaller file.",
+    "zh-CN": "文件超过服务器大小限制，请选择较小的文件。"
+  },
+  "Terlalu banyak permintaan. Tunggu sebentar sebelum mencoba kembali.": {
+    "en": "Too many requests. Wait a moment before retrying.",
+    "zh-CN": "请求过于频繁，请稍后重试。"
+  },
+  "Permintaan gagal. Muat ulang untuk memeriksa hasil terakhir.": {
+    "en": "Request failed. Refresh to check the latest result.",
+    "zh-CN": "请求失败，请刷新以查看最新结果。"
+  },
+  "Bukan folder.": {
+    "en": "This is not a folder.",
+    "zh-CN": "此项目不是文件夹。"
+  },
+  "Pilih sebuah file.": {
+    "en": "Select a file.",
+    "zh-CN": "请选择一个文件。"
+  },
+  "Preview format ini belum tersedia. Gunakan tombol Unduh untuk membukanya.": {
+    "en": "Preview is not available for this format. Download the file to open it.",
+    "zh-CN": "暂不支持预览此格式，请下载后打开。"
+  },
+  "File terlalu besar untuk preview. Silakan unduh file.": {
+    "en": "The file is too large to preview. Please download it.",
+    "zh-CN": "文件过大，无法预览，请下载文件。"
+  },
+  "File tidak dapat dibaca.": {
+    "en": "The file cannot be read.",
+    "zh-CN": "无法读取文件。"
+  },
+  "File terlalu besar untuk preview.": {
+    "en": "The file is too large to preview.",
+    "zh-CN": "文件过大，无法预览。"
+  },
+  "Isi file bukan PDF yang dikenali.": {
+    "en": "The file is not a recognized PDF.",
+    "zh-CN": "文件不是可识别的 PDF。"
+  },
+  "Isi file bukan gambar yang didukung.": {
+    "en": "The file is not a supported image.",
+    "zh-CN": "文件不是支持的图片格式。"
+  },
+  "Resolusi gambar terlalu besar untuk preview.": {
+    "en": "The image resolution is too large for preview.",
+    "zh-CN": "图片分辨率过高，无法预览。"
+  },
+  "Preview teks memerlukan file UTF-8. Silakan unduh file.": {
+    "en": "Text preview requires UTF-8. Please download the file.",
+    "zh-CN": "文本预览需要 UTF-8 编码，请下载文件。"
+  },
+  "Pilih satu file atau folder untuk diganti nama.": {
+    "en": "Select one file or folder to rename.",
+    "zh-CN": "请选择一个文件或文件夹进行重命名。"
+  },
+  "Nama tidak dapat diubah. Muat ulang untuk memeriksa file.": {
+    "en": "Cannot rename. Refresh to check the file.",
+    "zh-CN": "无法重命名，请刷新以检查文件。"
+  },
+  "Gagal membuat folder.": {
+    "en": "Could not create the folder.",
+    "zh-CN": "无法创建文件夹。"
+  },
+  "File tidak dapat dibuat.": {
+    "en": "Could not create the file.",
+    "zh-CN": "无法创建文件。"
+  },
+  "Gagal menulis file.": {
+    "en": "Could not write the file.",
+    "zh-CN": "无法写入文件。"
+  },
+  "Pilih folder atau isinya, jangan keduanya.": {
+    "en": "Select either the folder or its contents, not both.",
+    "zh-CN": "请选择文件夹或其内容，不要同时选择两者。"
+  },
+  "Folder tidak dapat ditempel ke dalam dirinya sendiri.": {
+    "en": "A folder cannot be pasted inside itself.",
+    "zh-CN": "不能将文件夹粘贴到其自身内部。"
+  },
+  "Ada nama tujuan yang sama.": {
+    "en": "Duplicate destination names.",
+    "zh-CN": "目标名称重复。"
+  },
+  "Operasi gagal; muat ulang untuk melihat hasil terakhir.": {
+    "en": "Operation failed; refresh to check the latest result.",
+    "zh-CN": "操作失败；请刷新以查看最新结果。"
+  },
+  "Operasi berhasil.": {
+    "en": "Operation successful.",
+    "zh-CN": "操作成功。"
+  },
+  "Nama upload duplikat.": {
+    "en": "Duplicate upload names.",
+    "zh-CN": "上传文件名重复。"
+  },
+  "Upload selesai.": {
+    "en": "Upload complete.",
+    "zh-CN": "上传完成。"
+  },
+  "Item berhasil dipulihkan ke lokasi asal.": {
+    "en": "Item restored to its original location.",
+    "zh-CN": "项目已恢复到原位置。"
+  },
+  "Item telah dihapus permanen.": {
+    "en": "Item permanently deleted.",
+    "zh-CN": "项目已永久删除。"
+  },
+  "Recycle Bin saat ini tersedia untuk folder lokal saja.": {
+    "en": "Recycle Bin is currently available for local folders only.",
+    "zh-CN": "回收站目前仅适用于本地文件夹。"
+  },
+  "Lokasi Recycle Bin tidak valid.": {
+    "en": "Invalid Recycle Bin location.",
+    "zh-CN": "回收站位置无效。"
+  },
+  "Metadata pemulihan gagal disimpan; file belum dipindahkan.": {
+    "en": "Could not save recovery metadata; the file has not been moved.",
+    "zh-CN": "无法保存恢复元数据；文件尚未移动。"
+  },
+  "File tidak dapat dipindahkan ke Recycle Bin.": {
+    "en": "Could not move the file to the Recycle Bin.",
+    "zh-CN": "无法将文件移至回收站。"
+  },
+  "Item Recycle Bin tidak ditemukan.": {
+    "en": "Recycle Bin item not found.",
+    "zh-CN": "未找到回收站项目。"
+  },
+  "Metadata pemulihan tidak valid.": {
+    "en": "Invalid recovery metadata.",
+    "zh-CN": "恢复元数据无效。"
+  },
+  "Isi Recycle Bin tidak ditemukan.": {
+    "en": "Recycle Bin contents not found.",
+    "zh-CN": "未找到回收站内容。"
+  },
+  "Pemulihan gagal; item tetap berada di Recycle Bin.": {
+    "en": "Restore failed; the item is still in the Recycle Bin.",
+    "zh-CN": "恢复失败；项目仍在回收站中。"
+  },
+  "Sebagian isi belum terhapus. Muat ulang dan periksa kembali.": {
+    "en": "Some contents were not deleted. Refresh and check again.",
+    "zh-CN": "部分内容未删除，请刷新后再次检查。"
+  },
+  "Folder internal Recycle Bin tidak dapat diakses langsung.": {
+    "en": "The internal Recycle Bin folder cannot be accessed directly.",
+    "zh-CN": "无法直接访问回收站内部文件夹。"
+  },
+  "Nama file/folder tidak valid.": {
+    "en": "Invalid file or folder name.",
+    "zh-CN": "文件或文件夹名称无效。"
+  },
+  "Symbolic link tidak diizinkan.": {
+    "en": "Symbolic links are not allowed.",
+    "zh-CN": "不允许使用符号链接。"
+  },
+  "File/folder tidak ditemukan.": {
+    "en": "File or folder not found.",
+    "zh-CN": "未找到文件或文件夹。"
+  },
+  "Tujuan harus berupa folder.": {
+    "en": "The destination must be a folder.",
+    "zh-CN": "目标必须是文件夹。"
+  },
+  "Nama sudah ada. File tidak ditimpa.": {
+    "en": "This name already exists. No file was overwritten.",
+    "zh-CN": "该名称已存在，未覆盖任何文件。"
+  },
+  "Lokasi di luar share tidak diizinkan.": {
+    "en": "Locations outside the share are not allowed.",
+    "zh-CN": "不允许访问共享范围之外的位置。"
+  },
+  "Folder tidak dapat dibaca.": {
+    "en": "The folder cannot be read.",
+    "zh-CN": "无法读取文件夹。"
+  },
+  "Share masih dalam mode uji baca. Operasi perubahan belum diaktifkan administrator.": {
+    "en": "The share is in read-only trial mode. Changes have not been enabled by the administrator.",
+    "zh-CN": "共享处于只读测试模式，管理员尚未启用修改操作。"
+  },
+  "Share tidak tersedia atau akun Windows Anda tidak memiliki akses.": {
+    "en": "The share is unavailable or your Windows account does not have access.",
+    "zh-CN": "共享不可用，或您的 Windows 账户没有访问权限。"
+  },
+  "Lokasi share tidak dapat diakses.": {
+    "en": "The share location cannot be accessed.",
+    "zh-CN": "无法访问共享位置。"
+  },
+  "Close": {
+    "en": "Close",
+    "zh-CN": "关闭",
+    "id": "Tutup"
+  },
+  "Show password": {
+    "en": "Show password",
+    "zh-CN": "显示密码",
+    "id": "Tampilkan password"
+  },
+  "Hide password": {
+    "en": "Hide password",
+    "zh-CN": "隐藏密码",
+    "id": "Sembunyikan password"
+  },
+  "Toggle Sidebar": {
+    "en": "Toggle sidebar",
+    "zh-CN": "切换侧边栏",
+    "id": "Buka/tutup sidebar"
+  },
+  "clipboard.ready": {
+    "id": "{count} item siap {action}. Buka folder tujuan lalu Tempel.",
+    "en": "{count} items ready to {action}. Open the destination folder and paste.",
+    "zh-CN": "{count} 个项目已准备{action}。请打开目标文件夹并粘贴。"
+  },
+  "copy.action": {
+    "id": "disalin",
+    "en": "copy",
+    "zh-CN": "复制"
+  },
+  "move.action": {
+    "id": "dipindahkan",
+    "en": "move",
+    "zh-CN": "移动"
+  },
+  "upload.result": {
+    "id": "{success} file tersimpan, {failed} gagal. Periksa rincian antrean upload.",
+    "en": "{success} files saved, {failed} failed. Check the upload queue for details.",
+    "zh-CN": "已保存 {success} 个文件，{failed} 个失败。请查看上传队列详情。"
+  },
+  "selection.count": {
+    "id": "{count} dipilih",
+    "en": "{count} selected",
+    "zh-CN": "已选择 {count} 项"
+  },
+  "items.count": {
+    "id": "{count} item",
+    "en": "{count} items",
+    "zh-CN": "{count} 项"
+  },
+  "delete.confirm": {
+    "id": "Pindahkan {count} item ke Recycle Bin?",
+    "en": "Move {count} items to the Recycle Bin?",
+    "zh-CN": "将 {count} 个项目移至回收站？"
+  },
+  "purge.confirm": {
+    "id": "Hapus permanen {name}?",
+    "en": "Permanently delete {name}?",
+    "zh-CN": "永久删除 {name}？"
+  },
+  "select.file": {
+    "id": "Pilih {name}",
+    "en": "Select {name}",
+    "zh-CN": "选择 {name}"
+  },
+  "upload.progress": {
+    "id": "Progress upload {name}",
+    "en": "Upload progress for {name}",
+    "zh-CN": "{name} 的上传进度"
+  },
+  "pdf.page": {
+    "id": "Pratinjau PDF halaman {page} dari {pages}",
+    "en": "PDF preview page {page} of {pages}",
+    "zh-CN": "PDF 预览，第 {page} 页，共 {pages} 页"
+  },
+  "activity.pages": {
+    "id": "{total} aktivitas · Halaman {page} / {pages}",
+    "en": "{total} activities · Page {page} / {pages}",
+    "zh-CN": "{total} 条活动 · 第 {page} / {pages} 页"
+  },
+  "Create an account": {
+    "id": "Buat akun",
+    "en": "Create an account",
+    "zh-CN": "创建账户"
+  },
+  "Enter your details below to create your account": {
+    "id": "Isi data berikut untuk membuat akun",
+    "en": "Enter your details below to create your account",
+    "zh-CN": "填写以下信息以创建账户"
+  },
+  "Register": {
+    "id": "Daftar",
+    "en": "Register",
+    "zh-CN": "注册"
+  },
+  "Name": {
+    "id": "Nama",
+    "en": "Name",
+    "zh-CN": "姓名"
+  },
+  "Full name": {
+    "id": "Nama lengkap",
+    "en": "Full name",
+    "zh-CN": "全名"
+  },
+  "Email address": {
+    "id": "Alamat email",
+    "en": "Email address",
+    "zh-CN": "电子邮箱"
+  },
+  "Email": {
+    "id": "Email",
+    "en": "Email",
+    "zh-CN": "电子邮箱"
+  },
+  "Confirm password": {
+    "id": "Konfirmasi password",
+    "en": "Confirm password",
+    "zh-CN": "确认密码"
+  },
+  "Create account": {
+    "id": "Buat akun",
+    "en": "Create account",
+    "zh-CN": "创建账户"
+  },
+  "Already have an account?": {
+    "id": "Sudah punya akun?",
+    "en": "Already have an account?",
+    "zh-CN": "已有账户？"
+  },
+  "Log in": {
+    "id": "Masuk",
+    "en": "Log in",
+    "zh-CN": "登录"
+  },
+  "log in": {
+    "id": "masuk",
+    "en": "log in",
+    "zh-CN": "登录"
+  },
+  "Forgot password": {
+    "id": "Lupa password",
+    "en": "Forgot password",
+    "zh-CN": "忘记密码"
+  },
+  "Enter your email to receive a password reset link": {
+    "id": "Masukkan email untuk menerima tautan reset password",
+    "en": "Enter your email to receive a password reset link",
+    "zh-CN": "输入邮箱以接收密码重置链接"
+  },
+  "Email password reset link": {
+    "id": "Kirim tautan reset password",
+    "en": "Email password reset link",
+    "zh-CN": "发送密码重置链接"
+  },
+  "Or, return to": {
+    "id": "Atau, kembali ke",
+    "en": "Or, return to",
+    "zh-CN": "或返回"
+  },
+  "Email verification": {
+    "id": "Verifikasi email",
+    "en": "Email verification",
+    "zh-CN": "邮箱验证"
+  },
+  "Please verify your email address by clicking on the link we just emailed to you.": {
+    "id": "Verifikasi email Anda melalui tautan yang baru saja dikirim.",
+    "en": "Please verify your email address by clicking on the link we just emailed to you.",
+    "zh-CN": "请点击我们刚发送给您的邮件中的链接以验证邮箱。"
+  },
+  "A new verification link has been sent to the email address you provided during registration.": {
+    "id": "Tautan verifikasi baru telah dikirim ke alamat email yang digunakan saat mendaftar.",
+    "en": "A new verification link has been sent to the email address you provided during registration.",
+    "zh-CN": "新的验证链接已发送至您注册时提供的邮箱。"
+  },
+  "Resend verification email": {
+    "id": "Kirim ulang email verifikasi",
+    "en": "Resend verification email",
+    "zh-CN": "重新发送验证邮件"
+  },
+  "Reset password": {
+    "id": "Reset password",
+    "en": "Reset password",
+    "zh-CN": "重置密码"
+  },
+  "Please enter your new password below": {
+    "id": "Masukkan password baru Anda di bawah",
+    "en": "Please enter your new password below",
+    "zh-CN": "请在下方输入新密码"
+  },
+  "This is a secure area of the application. Please confirm your password before continuing.": {
+    "id": "Ini adalah area terlindungi. Konfirmasi password sebelum melanjutkan.",
+    "en": "This is a secure area of the application. Please confirm your password before continuing.",
+    "zh-CN": "此区域受安全保护，请先确认密码再继续。"
+  },
+  "Confirm with passkey": {
+    "id": "Konfirmasi dengan passkey",
+    "en": "Confirm with passkey",
+    "zh-CN": "使用通行密钥确认"
+  },
+  "Confirming...": {
+    "id": "Mengonfirmasi…",
+    "en": "Confirming...",
+    "zh-CN": "正在确认…"
+  },
+  "Or confirm with password": {
+    "id": "Atau konfirmasi dengan password",
+    "en": "Or confirm with password",
+    "zh-CN": "或使用密码确认"
+  },
+  "Authenticating...": {
+    "id": "Memverifikasi…",
+    "en": "Authenticating...",
+    "zh-CN": "正在验证…"
+  },
+  "Sign in with a passkey": {
+    "id": "Masuk dengan passkey",
+    "en": "Sign in with a passkey",
+    "zh-CN": "使用通行密钥登录"
+  },
+  "Or continue with email": {
+    "id": "Atau lanjutkan dengan email",
+    "en": "Or continue with email",
+    "zh-CN": "或使用邮箱继续"
+  },
+  "Platform": {
+    "id": "Ruang kerja",
+    "en": "Platform",
+    "zh-CN": "工作空间"
+  },
+  "Terhubung melalui Windows. Akun dan password dikelola oleh administrator AD. Identitas mengikuti sesi Windows/browser, bukan tombol logout aplikasi.": {
+    "id": "Terhubung melalui Windows. Akun dan password dikelola oleh administrator AD. Identitas mengikuti sesi Windows/browser, bukan tombol logout aplikasi.",
+    "en": "Connected through Windows. Your AD administrator manages accounts and passwords. Identity follows the Windows/browser session, not the app logout button.",
+    "zh-CN": "通过 Windows 连接。账户和密码由 AD 管理员管理。身份由 Windows 或浏览器会话决定，应用退出按钮不会更改该身份。"
+  },
+  "staff.title": {
+    "id": "Pendaftaran staf",
+    "en": "Staff registration",
+    "zh-CN": "员工注册"
+  },
+  "staff.subtitle": {
+    "id": "Daftarkan akun aplikasi untuk staf baru dan pantau status verifikasi emailnya.",
+    "en": "Create application accounts for new staff and review their email verification status.",
+    "zh-CN": "为新员工创建应用账户并查看邮箱验证状态。"
+  },
+  "staff.admin_only": {
+    "id": "Khusus admin IT",
+    "en": "IT administrators only",
+    "zh-CN": "仅限 IT 管理员"
+  },
+  "staff.new": {
+    "id": "Daftarkan staf baru",
+    "en": "Register new staff",
+    "zh-CN": "注册新员工"
+  },
+  "staff.verification_note": {
+    "id": "Staf perlu memverifikasi email sebelum mengakses file. Gunakan alamat email staf yang benar.",
+    "en": "Staff must verify their email before accessing files. Use their correct email address.",
+    "zh-CN": "员工需验证邮箱后才能访问文件。请填写正确的员工邮箱。"
+  },
+  "staff.role_note": {
+    "id": "Akun baru selalu berstatus Staf. Menu ini tidak membuat akun AD atau mengubah permission folder Windows.",
+    "en": "New accounts always have the Staff role. This menu does not create AD accounts or change Windows folder permissions.",
+    "zh-CN": "新账户始终为员工角色。此菜单不会创建 AD 账户或更改 Windows 文件夹权限。"
+  },
+  "staff.submit": {
+    "id": "Daftarkan staf",
+    "en": "Register staff",
+    "zh-CN": "注册员工"
+  },
+  "staff.list": {
+    "id": "Daftar akun",
+    "en": "Account list",
+    "zh-CN": "账户列表"
+  },
+  "staff.role": {
+    "id": "Peran",
+    "en": "Role",
+    "zh-CN": "角色"
+  },
+  "staff.status": {
+    "id": "Verifikasi email",
+    "en": "Email verification",
+    "zh-CN": "邮箱验证"
+  },
+  "staff.date": {
+    "id": "Terdaftar",
+    "en": "Registered",
+    "zh-CN": "注册时间"
+  },
+  "staff.admin": {
+    "id": "Admin IT",
+    "en": "IT administrator",
+    "zh-CN": "IT 管理员"
+  },
+  "staff.member": {
+    "id": "Staf",
+    "en": "Staff",
+    "zh-CN": "员工"
+  },
+  "staff.verified": {
+    "id": "Terverifikasi",
+    "en": "Verified",
+    "zh-CN": "已验证"
+  },
+  "staff.pending": {
+    "id": "Menunggu verifikasi",
+    "en": "Awaiting verification",
+    "zh-CN": "等待验证"
+  },
+  "staff.contact_it": {
+    "id": "Untuk membuat akun baru, hubungi admin IT.",
+    "en": "Contact your IT administrator to create an account.",
+    "zh-CN": "如需创建账户，请联系 IT 管理员。"
+  },
+  "staff.created": {
+    "id": "Akun staf berhasil dibuat. Staf dapat masuk dan mengikuti proses verifikasi email. Pengiriman email mengikuti konfigurasi server.",
+    "en": "Staff account created. The staff member can sign in and complete email verification. Email delivery follows server configuration.",
+    "zh-CN": "员工账户已创建。员工可登录并完成邮箱验证。邮件发送取决于服务器配置。"
+  },
+  "staff.created_mail_failed": {
+    "id": "Akun sudah dibuat, tetapi email verifikasi gagal diproses. Jangan daftarkan ulang; staf dapat masuk dan meminta kirim ulang setelah konfigurasi email diperbaiki.",
+    "en": "The account was created, but verification email processing failed. Do not register it again; the staff member can sign in and request a resend after email configuration is fixed.",
+    "zh-CN": "账户已创建，但验证邮件处理失败。请勿重复注册；修复邮件配置后，员工可登录并请求重新发送。"
+  }
+}

@@ -64,7 +64,10 @@ const prefersDark = (): boolean => {
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
 };
 
+const systemIsDark = ref(prefersDark());
+
 const handleSystemThemeChange = () => {
+    systemIsDark.value = prefersDark();
     const currentAppearance = getStoredAppearance();
 
     updateTheme(currentAppearance || 'system');
@@ -98,7 +101,7 @@ export function useAppearance(): UseAppearanceReturn {
 
     const resolvedAppearance = computed<ResolvedAppearance>(() => {
         if (appearance.value === 'system') {
-            return prefersDark() ? 'dark' : 'light';
+            return systemIsDark.value ? 'dark' : 'light';
         }
 
         return appearance.value;

@@ -38,8 +38,15 @@ class HandleInertiaRequests extends Middleware
         return [
             ...parent::share($request),
             'name' => config('app.name'),
+            'locale' => app()->getLocale(),
+            'share' => [
+                'driver' => config('share.driver'),
+                'domain' => config('share.driver') === 'windows' ? config('share.windows.domain') : null,
+                'writesEnabled' => config('share.driver') !== 'windows' || (bool) config('share.windows.writes_enabled'),
+            ],
             'auth' => [
                 'user' => $request->user(),
+                'can_manage_staff' => config('share.driver') === 'local' && $request->user() instanceof \App\Models\User && (bool) $request->user()->is_it_admin,
             ],
             'sidebarOpen' => ! $request->hasCookie('sidebar_state') || $request->cookie('sidebar_state') === 'true',
         ];
