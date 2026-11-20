@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShareController;
 
-Route::inertia('/', 'Welcome')->name('home');
+Route::redirect('/', '/login')->name('home');
 
 Route::middleware(['auth', 'verified', \App\Http\Middleware\RecordFileActivity::class])->group(function () {
     Route::inertia('dashboard', 'Dashboard')->name('dashboard');
@@ -23,4 +23,6 @@ require __DIR__.'/settings.php';
 Route::middleware(['auth', 'verified', \App\Http\Middleware\RequireItAdmin::class])->prefix('admin')->group(function () {
     Route::get('staff', [\App\Http\Controllers\StaffRegistrationController::class, 'index'])->name('admin.staff.index');
     Route::post('staff', [\App\Http\Controllers\StaffRegistrationController::class, 'store'])->middleware('throttle:10,1')->name('admin.staff.store');
+    Route::post('staff/{user}/invitation', [\App\Http\Controllers\StaffRegistrationController::class, 'resend'])->middleware('throttle:10,1')->name('admin.staff.invitation');
+    Route::patch('staff/{user}/status', [\App\Http\Controllers\StaffRegistrationController::class, 'status'])->middleware('throttle:30,1')->name('admin.staff.status');
 });

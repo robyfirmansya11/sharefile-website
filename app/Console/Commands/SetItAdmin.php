@@ -21,8 +21,13 @@ class SetItAdmin extends Command
             $this->error('Akun tidak ditemukan. Tidak ada akun atau hak akses yang diubah.');
             return self::FAILURE;
         }
-        $user->is_it_admin = ! $this->option('revoke');
-        $user->save();
+        try {
+            app(\App\Services\StaffAccountStatus::class)->setAdmin($user, ! $this->option('revoke'));
+        } catch (\Illuminate\Validation\ValidationException $exception) {
+            $this->error(__('staff.last_admin'));
+            return self::FAILURE;
+        }
+        $user->refresh();
         $this->info($user->is_it_admin ? 'Role admin IT telah diberikan.' : 'Role admin IT telah dicabut.');
         if (! $user->hasVerifiedEmail()) $this->warn('Akun masih harus memverifikasi email sebelum mengakses menu admin.');
 

@@ -29,6 +29,18 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Covers password, two-factor and passkey sign-ins through the web guard.
+        \Illuminate\Support\Facades\Event::listen(\Illuminate\Auth\Events\Login::class, function ($event) {
+            if ($event->guard !== 'web' || ! $event->user instanceof \App\Models\User || ! request()->hasSession()) return;
+            $user = $event->user->fresh();
+            if (! $user || ! $user->is_active) {
+                \Illuminate\Support\Facades\Auth::guard('web')->logout();
+                request()->session()->invalidate();
+                request()->session()->regenerateToken();
+                throw \Illuminate\Validation\ValidationException::withMessages(['email' => __('auth.failed')]);
+            }
+            request()->session()->put('account_version', $user->session_version);
+        });
         $this->configureActions();
         $this->configureViews();
         $this->configureRateLimiting();
@@ -39,6 +51,10 @@ class FortifyServiceProvider extends ServiceProvider
      */
     private function configureActions(): void
     {
+        Fortify::authenticateUsing(function (Request $request) {
+            $user = \App\Models\User::where('email', $request->input('email'))->first();
+            return $user && $user->is_active && \Illuminate\Support\Facades\Hash::check($request->input('password'), $user->password) ? $user : null;
+        });
         Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
         Fortify::createUsersUsing(CreateNewUser::class);
     }

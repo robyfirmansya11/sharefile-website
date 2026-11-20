@@ -11,7 +11,7 @@ class RequireItAdmin
     public function handle(Request $request, Closure $next)
     {
         $user = $request->user();
-        abort_unless(config('share.driver') === 'local' && $user instanceof User && $user->is_it_admin, 403);
+        abort_unless(config('share.driver') === 'local' && $user instanceof User && $user->is_it_admin && $user->is_active, 403);
 
         return $next($request);
     }

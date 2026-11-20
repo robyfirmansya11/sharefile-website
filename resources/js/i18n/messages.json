@@ -1181,9 +1181,9 @@
     "zh-CN": "注册新员工"
   },
   "staff.verification_note": {
-    "id": "Staf perlu memverifikasi email sebelum mengakses file. Gunakan alamat email staf yang benar.",
-    "en": "Staff must verify their email before accessing files. Use their correct email address.",
-    "zh-CN": "员工需验证邮箱后才能访问文件。请填写正确的员工邮箱。"
+    "id": "Staf menerima tautan untuk membuat password sendiri. Setelah berhasil, email otomatis terverifikasi dan staf dapat masuk.",
+    "en": "Staff receive a link to set their own password. Once completed, their email is verified and they can sign in.",
+    "zh-CN": "员工将收到设置密码的链接。成功设置后，邮箱自动验证，即可登录。"
   },
   "staff.role_note": {
     "id": "Akun baru selalu berstatus Staf. Menu ini tidak membuat akun AD atau mengubah permission folder Windows.",
@@ -1191,9 +1191,9 @@
     "zh-CN": "新账户始终为员工角色。此菜单不会创建 AD 账户或更改 Windows 文件夹权限。"
   },
   "staff.submit": {
-    "id": "Daftarkan staf",
-    "en": "Register staff",
-    "zh-CN": "注册员工"
+    "id": "Kirim undangan staf",
+    "en": "Send staff invitation",
+    "zh-CN": "发送员工邀请"
   },
   "staff.list": {
     "id": "Daftar akun",
@@ -1249,5 +1249,90 @@
     "id": "Akun sudah dibuat, tetapi email verifikasi gagal diproses. Jangan daftarkan ulang; staf dapat masuk dan meminta kirim ulang setelah konfigurasi email diperbaiki.",
     "en": "The account was created, but verification email processing failed. Do not register it again; the staff member can sign in and request a resend after email configuration is fixed.",
     "zh-CN": "账户已创建，但验证邮件处理失败。请勿重复注册；修复邮件配置后，员工可登录并请求重新发送。"
+  },
+  "staff.resend_invite": {
+    "id": "Kirim ulang undangan",
+    "en": "Resend invitation",
+    "zh-CN": "重新发送邀请"
+  },
+  "staff.invited": {
+    "id": "Akun tersimpan. SMTP menerima undangan untuk dikirim; periksa inbox atau spam penerima.",
+    "en": "Account saved. SMTP accepted the invitation for delivery; check the recipient inbox or spam folder.",
+    "zh-CN": "账户已保存。SMTP 已接受邀请邮件，请检查收件箱或垃圾邮件。"
+  },
+  "staff.invited_local": {
+    "id": "Akun tersimpan. Undangan diproses melalui mailer lokal, bukan dikirim ke inbox.",
+    "en": "Account saved. Invitation processed by the local mailer, not delivered to an inbox.",
+    "zh-CN": "账户已保存。邀请由本地邮件服务处理，未发送到收件箱。"
+  },
+  "staff.invite_wait": {
+    "id": "Tunggu sebentar sebelum mengirim ulang. Akun sudah tersimpan.",
+    "en": "Wait before resending. The account is already saved.",
+    "zh-CN": "请稍后重新发送。账户已保存。"
+  },
+  "staff.invite_failed": {
+    "id": "Akun tersimpan, tetapi undangan gagal dikirim. Periksa SMTP lalu kirim ulang undangan; jangan daftar ulang.",
+    "en": "Account saved, but invitation delivery failed. Check SMTP and resend; do not register again.",
+    "zh-CN": "账户已保存，但邀请发送失败。请检查 SMTP 并重新发送，不要重复注册。"
+  },
+  "staff.account_status": {
+    "id": "Status akun",
+    "en": "Account status",
+    "zh-CN": "账户状态"
+  },
+  "staff.active": {
+    "id": "Aktif",
+    "en": "Active",
+    "zh-CN": "已启用"
+  },
+  "staff.inactive": {
+    "id": "Nonaktif",
+    "en": "Inactive",
+    "zh-CN": "已停用"
+  },
+  "staff.activate": {
+    "id": "Aktifkan akun",
+    "en": "Activate account",
+    "zh-CN": "启用账户"
+  },
+  "staff.deactivate": {
+    "id": "Nonaktifkan akun",
+    "en": "Deactivate account",
+    "zh-CN": "停用账户"
+  },
+  "staff.enabled": {
+    "id": "Akun diaktifkan. Pengguna perlu login kembali.",
+    "en": "Account activated. The user must sign in again.",
+    "zh-CN": "账户已启用，用户需要重新登录。"
+  },
+  "staff.disabled": {
+    "id": "Akun dinonaktifkan. Login dan permintaan sesi lama akan ditolak.",
+    "en": "Account deactivated. Sign-ins and old session requests will be rejected.",
+    "zh-CN": "账户已停用。登录和旧会话请求将被拒绝。"
+  },
+  "staff.disable_note": {
+    "id": "Login akan ditolak dan sesi lama dicabut. File pengguna tidak dihapus. Operasi yang sudah berjalan tidak dapat dibatalkan oleh perubahan ini.",
+    "en": "Sign-in will be blocked and old sessions revoked. Files are not deleted. Operations already running cannot be cancelled by this change.",
+    "zh-CN": "将禁止登录并撤销旧会话，不会删除文件。此操作无法取消已在执行的操作。"
+  },
+  "staff.enable_note": {
+    "id": "Pengguna dapat login kembali. Sesi dan undangan lama yang dicabut tetap tidak berlaku.",
+    "en": "The user can sign in again. Revoked sessions and invitations remain invalid.",
+    "zh-CN": "用户可以重新登录。已撤销的会话和邀请仍然无效。"
+  },
+  "staff.cannot_disable_self": {
+    "id": "Anda tidak dapat menonaktifkan akun sendiri.",
+    "en": "You cannot deactivate your own account.",
+    "zh-CN": "您不能停用自己的账户。"
+  },
+  "staff.last_admin": {
+    "id": "Pertahankan minimal satu admin IT aktif dengan email terverifikasi.",
+    "en": "Keep at least one active IT administrator with a verified email.",
+    "zh-CN": "必须保留至少一位邮箱已验证的活跃 IT 管理员。"
+  },
+  "staff.session_revoked": {
+    "id": "Sesi dicabut atau akun nonaktif. Hubungi admin IT jika memerlukan akses.",
+    "en": "Your session was revoked or your account is inactive. Contact IT if you need access.",
+    "zh-CN": "您的会话已撤销或账户已停用。如需访问，请联系 IT。"
   }
 }

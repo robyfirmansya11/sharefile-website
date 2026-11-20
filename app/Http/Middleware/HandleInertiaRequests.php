@@ -46,7 +46,7 @@ class HandleInertiaRequests extends Middleware
             ],
             'auth' => [
                 'user' => $request->user(),
-                'can_manage_staff' => config('share.driver') === 'local' && $request->user() instanceof \App\Models\User && (bool) $request->user()->is_it_admin,
+                'can_manage_staff' => config('share.driver') === 'local' && $request->user() instanceof \App\Models\User && (bool) $request->user()->is_it_admin && $request->user()->is_active,
             ],
             'sidebarOpen' => ! $request->hasCookie('sidebar_state') || $request->cookie('sidebar_state') === 'true',
         ];

@@ -132,15 +132,42 @@ exit;
 
 Then run `staff:admin` for that address. Use **Forgot password** on the login page to set a private password through the emailed reset link, sign in, and complete email verification. The admin menu requires both the role and a verified email. This procedure does not mark an email verified or create an AD account.
 
-To revoke the application role:
+To revoke the application role (another active, verified IT administrator must remain):
 
 ```powershell
 php artisan staff:admin admin@example.com --revoke
 ```
 
-In **Staff registration**, IT can create ordinary staff accounts and review verification status. New accounts cannot gain admin status through the form. If email processing fails after account creation, the account remains saved; correct mail delivery and request verification again rather than creating a duplicate.
+In **Staff registration**, IT enters only the staff member's name and email. The application creates an ordinary account with an undisclosed random password and sends an invitation through Laravel's password broker. Staff set their own password using the expiring, single-use invitation link. Successful completion also verifies the invited email, without a second email challenge. This applies only when the stored invitation fingerprint, current email, and valid broker token match; ordinary password resets do not bypass email verification. Invitations issued before this change must be resent to use this flow. New accounts cannot gain admin status through the form. If delivery fails, the account remains saved; correct mail delivery and use **Resend invitation** rather than creating a duplicate. Resends are restricted to IT administrators and unverified accounts, throttled, and replace previous tokens. Existing account passwords are not changed by resending a link.
+
+### SMTP with a cPanel mailbox
+
+Use your hosting provider's outgoing-server settings. For implicit TLS on port 465, configure the private `.env`:
+
+```dotenv
+MAIL_MAILER=smtp
+MAIL_SCHEME=smtps
+MAIL_HOST=mail.example.com
+MAIL_PORT=465
+MAIL_USERNAME=it@example.com
+MAIL_PASSWORD="SET_PRIVATELY"
+MAIL_FROM_ADDRESS=it@example.com
+MAIL_FROM_NAME="Sharefolder IT"
+```
+
+Keep certificate verification enabled. Never commit the real mailbox password or ask staff to share their password with IT. Apply changes with `php artisan config:clear` (or rebuild the configuration cache during deployment). SMTP acceptance is not proof of inbox delivery; check spam filtering and the hosting provider's delivery diagnostics when needed.
+
+Invitation URLs use `APP_URL`. A localhost URL only works on the machine hosting the app. Before inviting staff on other computers, configure an authorized, reachable application URL and use HTTPS for non-local access. SMTP credentials and live delivery must be tested privately; automated tests use fake notifications and do not send messages.
 
 With `MAIL_MAILER=log`, emails are written to private application logs, not delivered to inboxes. These logs may contain verification/reset links: do not publish them or use this mail mode for real onboarding.
+
+### Activate or deactivate staff
+
+IT administrators can activate/deactivate local accounts from the account list, with a confirmation dialog. Existing accounts remain active when the status migration is applied. Self-deactivation is rejected, and the last active, email-verified IT administrator cannot be deactivated or have their role revoked through the provided command.
+
+Deactivation blocks password login and rejects web-guard login events, including two-factor/passkey completion. Database sessions are removed when that session driver is used, remember-me credentials are rotated, and invitation/reset tokens are revoked. A session version check rejects old sessions on their next request, including after reactivation. Already-running operations and files already downloaded cannot be recalled. Account files and activity records are not deleted.
+
+Reactivation permits a fresh sign-in; it does not restore revoked sessions or invitation tokens. Unverified staff may need a new invitation. These controls apply to local application accounts, not AD accounts or Windows permissions. Password resets cannot reactivate a disabled account. Account-status changes are not yet included in a dedicated administrator audit log.
 
 ## Limits and behavior
 
