@@ -6,35 +6,29 @@ Driver `windows` telah ditambahkan. IIS memverifikasi user dan PHP FastCGI imper
 
 **Belum terpasang / teruji di Windows Server yang sebenarnya.** Unit/feature test memakai variabel IIS simulasi untuk menguji kontrol aplikasi, bukan membuktikan token Windows atau ACL SMB. `.env` lokal tetap tidak diubah. Aktifkan produksi hanya setelah uji penerimaan di bawah lulus. Tahap pertama `SMB_WRITES_ENABLED=false` untuk uji list/download.
 
-## Lingkungan
+## Lingkungan dan contoh
 
-Update 18 November 2026: pengujian aplikasi dilakukan lebih dulu di laptop IT-ASI. Laptop terdeteksi WORKGROUP (PartOfDomain=False), tanpa layanan IIS W3SVC. Halaman `http://127.0.0.1:8000/login` merespons HTTP 200. Mode lokal tetap digunakan; ini belum menguji AD/SMB per user.
+Semua nama domain, hostname, dan alamat dalam panduan ini adalah placeholder. Ganti dengan konfigurasi yang disetujui administrator; simpan inventaris server, binding, sertifikat, dan hasil diagnostik di dokumentasi internal.
 
-Hostname website yang dipilih: `sharefolder.bumimorowaliutama.com`. Ini adalah hostname web, bukan perubahan domain AD. DNS/binding/sertifikat belum dibuat atau diubah. Selama pengembangan laptop, gunakan URL localhost yang sudah berjalan. Untuk uji AD dari web server laptop ke ASI01, topologi berubah menjadi dua host sehingga memerlukan IIS/HTTPS, integrasi domain, serta pengujian delegasi Kerberos ke CIFS; konfigurasi deployment satu server tidak cukup.
-
-Hasil pemeriksaan server dari user: Web-Server, Web-Windows-Auth, Web-CGI Installed; handler PHP site-site yang ada menggunakan `C:\PHP83\php-cgi.exe`, PHP 8.3.32, `C:\PHP83\php.ini`, impersonation Off. Jangan mengubah konfigurasi PHP bersama tanpa memeriksa dampak pada site lain. Sertifikat yang dilaporkan hanya untuk ASI01.artabumisentraindustri.com dan berakhir 28 Januari 2026; perlu sertifikat valid yang mencakup hostname website baru sebelum uji HTTPS AD.
-
-| Komponen | Nilai |
+| Komponen | Contoh |
 | --- | --- |
-| Server web dan file | ASI01, 192.168.3.10 |
-| Domain DNS | artabumisentraindustri.com |
-| Domain NetBIOS | ASI001 (berdasarkan output nbtstat user; konfirmasi lewat Get-ADDomain) |
-| Share | `\\192.168.3.10\SMB` |
-| Folder fisik | `D:\SMB` |
-| Login | `ASI001\namauser` atau UPN domain yang dikonfigurasi |
+| Domain DNS | `corp.example.com` |
+| Domain NetBIOS | `EXAMPLE` |
+| Share | `\\fileserver.example.com\TeamFiles` |
+| Login | `EXAMPLE\username` atau UPN domain yang dikonfigurasi |
 
-Share tetap diakses melalui UNC supaya Share ACL dan NTFS sama-sama berlaku. `D:\SMB` tidak diterima sebagai root oleh driver Windows. Department saat ini dapat berupa subfolder di share ini; root share department terpisah belum didukung.
+Driver Windows mengharuskan root UNC supaya Share ACL dan NTFS sama-sama diuji. Path fisik lokal tidak diterima sebagai root. Beberapa root share departemen belum didukung.
 
 ## 1. Periksa server terlebih dahulu
 
-Jalankan `deployment/iis/Inspect-Server.ps1` pada ASI01 jika membutuhkan pemeriksaan ulang. Script hanya membaca nama/domain server, status role IIS, konfigurasi share dan binding IIS. Script tidak menginstal role atau mengubah ACL/AD. Komponen IIS utama telah dikonfirmasi terpasang.
+Jalankan `deployment/iis/Inspect-Server.ps1 -ShareName TeamFiles` pada server target jika membutuhkan pemeriksaan. Script hanya membaca konfigurasi; hasilnya dapat memuat detail internal dan tidak boleh dipublikasikan. Pastikan role IIS, handler PHP, domain, DNS, dan sertifikat sesuai lingkungan Anda.
 
-Output nbtstat yang diberikan menampilkan registrasi domain controller dan interface publik. Pastikan site ini hanya bisa diakses melalui jaringan internal/VPN dan binding/firewall yang sesuai; jangan membuat binding publik. Evaluasi pemisahan web dari domain controller bersama admin sebelum produksi; bila dipisah, konfigurasi delegasi Windows harus dirancang ulang dan diuji, bukan memakai fallback akun layanan.
+Batasi akses website melalui jaringan internal/VPN. Evaluasi pemisahan web server dari domain controller. Topologi dengan web server dan file server berbeda memerlukan desain dan pengujian delegasi Windows/Kerberos yang sesuai; jangan mengatasi kegagalan dengan fallback akun layanan.
 
 ## 2. Siapkan IIS
 
 - Gunakan site HTTPS dengan hostname internal dan sertifikat valid. Tentukan hostname bersama admin DNS. Akses HTTP ditolak aplikasi pada mode Windows. Jangan mematikan validasi sertifikat/loopback untuk mengatasi kegagalan login.
-- Document root menunjuk ke direktori `public` project. Jangan menunjuk ke root project atau `D:\SMB`.
+- Document root menunjuk ke direktori `public` project. Jangan menunjuk ke root project atau `D:\TeamFiles`.
 - Siapkan IIS Windows Authentication, CGI/FastCGI, URL Rewrite, dan PHP NTS yang memenuhi composer.lock. Register handler `*.php` ke lokasi `php-cgi.exe` yang benar. Jangan membuka listener FastCGI ke jaringan atau memetakan header HTTP ke LOGON_USER/AUTH_USER.
 - Windows Authentication ON; Anonymous dan Basic Authentication OFF untuk seluruh site termasuk endpoint file. Jangan memasang kredensial user tetap pada opsi Connect As virtual directory. Token harus berasal dari user IIS, bukan identity application pool.
 - `deployment/iis/web.config.example` adalah template untuk `public/web.config` pada deployment. Periksa dan gabungkan dengan konfigurasi IIS yang sudah ada. Jika bagian authentication terkunci (500.19), atur pada level site melalui IIS Manager; jangan membuka semua section secara global.
@@ -45,9 +39,11 @@ Di **php.ini yang digunakan handler IIS**, bukan hanya PHP CLI:
 ```ini
 fastcgi.impersonate = 1
 upload_max_filesize = 25M
-post_max_size = 512M
+post_max_size = 32M
 max_file_uploads = 20
 ```
+
+Antrean browser mengirim satu file per request. Sesuaikan batas request IIS/proxy dengan ukuran yang diperlukan; template IIS belum merupakan konfigurasi produksi final.
 
 Recycle pool setelah konfigurasi dilakukan. Periksa mode PHP lewat administrasi server; jangan meninggalkan phpinfo publik. Aplikasi mensyaratkan Windows + `cgi-fcgi`, IIS, `fastcgi.impersonate`, HTTPS, AUTH_TYPE Windows, dan LOGON_USER/AUTH_USER yang cocok. HTTP headers/query/body dengan nama serupa tidak dipercaya.
 
@@ -60,9 +56,9 @@ APP_ENV=production
 APP_DEBUG=false
 # APP_URL harus URL HTTPS internal yang benar.
 SHARE_DRIVER=windows
-AD_DOMAIN=artabumisentraindustri.com
-AD_NETBIOS_DOMAIN=ASI001
-SMB_UNC_ROOT='\\192.168.3.10\SMB'
+AD_DOMAIN=corp.example.com
+AD_NETBIOS_DOMAIN=EXAMPLE
+SMB_UNC_ROOT='\\fileserver.example.com\TeamFiles'
 SMB_WRITES_ENABLED=false
 SESSION_SECURE_COOKIE=true
 SESSION_DRIVER=database
@@ -80,7 +76,7 @@ UNC loopback pada server yang sama tetap perlu diuji. Bila autentikasi memakai h
 1. Gunakan akun domain biasa dengan izin baca, akun read/write, dan akun tanpa akses. Jangan memakai Domain Admin sebagai satu-satunya pengujian.
 2. Akses HTTPS `/dashboard`. Identitas pada menu user harus sesuai Windows/browser. Identitas selalu diperiksa ulang dari IIS, bukan cookie login lokal. Email verification/registrasi lokal tidak berlaku untuk identitas Windows.
 3. Dalam mode uji baca, list dan download harus mengikuti Share + NTFS. Upload/create/move/copy/delete ditolak untuk semua user selama flag write false.
-4. Uji request tanpa Windows auth, domain lain, akun lokal ASI01, dan header identitas palsu; semuanya harus ditolak. Login/register/password/passkey/logout lokal tidak dapat dipakai di mode Windows.
+4. Uji request tanpa Windows auth, domain lain, akun lokal FILESERVER, dan header identitas palsu; semuanya harus ditolak. Login/register/password/passkey/logout lokal tidak dapat dipakai di mode Windows.
 5. Uji dua user pada sesi browser/Windows terpisah; tidak boleh terjadi perpindahan identitas atau isi session. Logout aplikasi tidak dapat menghapus tiket Integrated Windows Authentication; UI memberi penjelasan itu.
 6. Setelah baca terbukti, pada lingkungan uji saja ubah `SMB_WRITES_ENABLED=true`, reload konfigurasi dan uji seluruh operasi. Ini tidak memberi izin NTFS baru: user read-only harus tetap gagal menulis, user tanpa izin tetap gagal mengakses, dan user read/write hanya boleh mengubah lokasi yang diizinkan.
 7. Verifikasi user/SID pada audit Windows file server, termasuk operasi download dan upload. Uji ACL subfolder, deny ACE, Share ACL lebih ketat, file terkunci, konflik nama, junction/reparse point, upload besar, dan kegagalan di tengah batch. Flag/runtime checks PHP tidak menggantikan pembuktian audit token.

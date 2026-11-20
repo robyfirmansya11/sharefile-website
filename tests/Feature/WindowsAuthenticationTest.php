@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Inertia\Testing\AssertableInertia as Assert;
 
 beforeEach(function () {
-    config(['share.driver' => 'windows', 'share.windows.netbios_domain' => 'ASI001']);
+    config(['share.driver' => 'windows', 'share.windows.domain' => 'corp.example.com', 'share.windows.netbios_domain' => 'EXAMPLE']);
 });
 
 function iisIdentityForTest(): void
@@ -18,7 +18,7 @@ function iisIdentityForTest(): void
     });
 }
 
-function iisServerVariables(string $principal = 'ASI001\\alice'): array
+function iisServerVariables(string $principal = 'EXAMPLE\\alice'): array
 {
     return ['LOGON_USER' => $principal, 'AUTH_USER' => $principal, 'AUTH_TYPE' => 'Negotiate'];
 }
@@ -34,14 +34,14 @@ it('does not accept a local login as Windows authentication', function () {
 
 it('ignores user identity supplied as HTTP headers', function () {
     iisIdentityForTest();
-    $this->withHeaders(['LOGON_USER' => 'ASI001\\alice', 'AUTH_USER' => 'ASI001\\alice', 'AUTH_TYPE' => 'Negotiate'])->getJson('/dashboard')->assertUnauthorized();
+    $this->withHeaders(['LOGON_USER' => 'EXAMPLE\\alice', 'AUTH_USER' => 'EXAMPLE\\alice', 'AUTH_TYPE' => 'Negotiate'])->getJson('/dashboard')->assertUnauthorized();
 });
 
 it('uses IIS identity without creating a local account or requiring email verification', function () {
     iisIdentityForTest();
     $this->withServerVariables(iisServerVariables())->get('/dashboard')
         ->assertOk()->assertInertia(fn (Assert $page) => $page
-            ->component('Dashboard')->where('auth.user.windows_principal', 'asi001\\alice')
+            ->component('Dashboard')->where('auth.user.windows_principal', 'example\\alice')
             ->where('share.driver', 'windows')->where('share.writesEnabled', false));
     expect(User::count())->toBe(0);
     expect(auth()->user())->toBeInstanceOf(WindowsUser::class);
@@ -61,29 +61,29 @@ it('blocks local identity management endpoints in Windows mode', function (strin
 it('rejects principals outside the configured domain', function (string $principal) {
     iisIdentityForTest();
     $this->withServerVariables(iisServerVariables($principal))->getJson('/dashboard')->assertForbidden();
-})->with(['ASI01\\Administrator', 'OTHER\\alice', 'alice@other.example']);
+})->with(['FILESERVER\\Administrator', 'OTHER\\alice', 'alice@other.example']);
 
 it('rejects absent mismatched or non-Windows authentication', function (array $variables) {
     iisIdentityForTest();
     $this->withServerVariables($variables)->getJson('/dashboard')->assertUnauthorized();
 })->with([
-    [['AUTH_TYPE' => 'Negotiate', 'LOGON_USER' => 'ASI001\\alice', 'AUTH_USER' => 'ASI001\\bob']],
-    [['AUTH_TYPE' => 'Basic', 'LOGON_USER' => 'ASI001\\alice', 'AUTH_USER' => 'ASI001\\alice']],
+    [['AUTH_TYPE' => 'Negotiate', 'LOGON_USER' => 'EXAMPLE\\alice', 'AUTH_USER' => 'EXAMPLE\\bob']],
+    [['AUTH_TYPE' => 'Basic', 'LOGON_USER' => 'EXAMPLE\\alice', 'AUTH_USER' => 'EXAMPLE\\alice']],
     [['AUTH_TYPE' => 'Negotiate', 'LOGON_USER' => 'alice', 'AUTH_USER' => 'alice']],
 ]);
 
 it('accepts the configured UPN suffix and rejects blank domain configuration', function () {
     iisIdentityForTest();
-    $this->withServerVariables(iisServerVariables('alice@artabumisentraindustri.com'))->get('/dashboard')->assertOk();
+    $this->withServerVariables(iisServerVariables('alice@corp.example.com'))->get('/dashboard')->assertOk();
     config(['share.windows.netbios_domain' => '']);
     $this->withServerVariables(iisServerVariables())->getJson('/dashboard')->assertForbidden();
 });
 
 it('replaces the session when IIS supplies a different user', function () {
     iisIdentityForTest();
-    $this->withSession(['windows_principal' => 'asi001\\bob', 'private_marker' => 'old-user'])
+    $this->withSession(['windows_principal' => 'example\\bob', 'private_marker' => 'old-user'])
         ->withServerVariables(iisServerVariables())->get('/dashboard')
-        ->assertOk()->assertSessionMissing('private_marker')->assertSessionHas('windows_principal', 'asi001\\alice');
+        ->assertOk()->assertSessionMissing('private_marker')->assertSessionHas('windows_principal', 'example\\alice');
 });
 
 it('rejects a physical drive root before accessing any share', function () {

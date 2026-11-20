@@ -6,9 +6,9 @@ return [
     'root' => env('SHARE_LOCAL_ROOT', storage_path('app/share-demo')),
     'max_upload_kb' => 25600,
     'windows' => [
-        'domain' => env('AD_DOMAIN', 'artabumisentraindustri.com'),
+        'domain' => env('AD_DOMAIN', ''),
         'netbios_domain' => env('AD_NETBIOS_DOMAIN', ''),
-        'root' => env('SMB_UNC_ROOT', '\\\\192.168.3.10\\SMB'),
+        'root' => env('SMB_UNC_ROOT', ''),
         'writes_enabled' => env('SMB_WRITES_ENABLED', false),
     ],
 ];
